@@ -1,0 +1,40 @@
+<mvc:View controllerName="nanneboinaproj_results.controller.home" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<App id="nanneboina"> <!-- main root view(home) should have id(for routing) -->
+		<pages>
+			<Page title="Results Management System">
+				<content >
+					<f:SimpleForm id="SimpleFormToolbar" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4"
+						labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1"
+						singleContainerFullSize="false" ariaLabelledBy="Title1">
+						<f:toolbar>
+							<Toolbar id="TB1">
+								<Title id="Title1" text="Home Page"/>
+							</Toolbar>
+						</f:toolbar>
+						<f:content>
+							<Label text="User"/>
+							<ComboBox xmlns="sap.m" id="box" selectionChange="onChange">
+								<items>
+									<core:Item xmlns:core="sap.ui.core" key="key1" text="Admin" id="item1"/>
+									<core:Item xmlns:core="sap.ui.core" key="key2" text="Faculty" id="item2"/>
+									<core:Item xmlns:core="sap.ui.core" key="key3" text="Student" id="item3"/>
+								</items>
+							</ComboBox>
+							<Label text="Userid"/>
+							<Input type="Text" id="uid" placeholder="Enter Userid" />
+							<Label text="Password"/>
+							<Input type="Password" id="pwd" placeholder="Enter Password" />
+						</f:content>
+					</f:SimpleForm>
+					<FlexBox justifyContent="Center">
+						<HBox>
+							<Button text="Submit" press="onSubmit"/>
+							<Button text="Clear" press="onClear"/>
+						</HBox>
+					</FlexBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

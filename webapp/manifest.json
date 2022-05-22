@@ -1,0 +1,165 @@
+{
+	"_version": "1.7.0",
+	"sap.app": {
+		"id": "nanneboinaproj_results",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponent",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"ZNS_ODATA_SRV": {
+				"uri": "/sap/opu/odata/sap/ZNS_ODATA_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "nanneboinaproj_results.view.home",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.ushell": {},
+				"sap.collaboration": {},
+				"sap.ui.comp": {},
+				"sap.uxap": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "nanneboinaproj_results.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			      ]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "nanneboinaproj_results.view",
+				"targetAggregation": "pages"
+			},
+			"targets": {},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "home",
+					"view": "home",
+					"targetAggregation": "pages",
+					"controlId": "nanneboina"
+				},
+				{
+					"pattern": "adminpage",
+					"name": "admin",
+					"view": "admin",
+					"targetAggregation": "pages",
+					"controlId": "nanneboina"
+				},
+				{
+					"pattern": "addfacultypage",
+					"name": "addfaculty",
+					"view": "addfaculty",
+					"targetAggregation": "pages",
+					"controlId": "nanneboina"
+				},
+				{
+					"pattern": "addstudentpage",
+					"name": "addstudent",
+					"view": "addstudent",
+					"targetAggregation": "pages",
+					"controlId": "nanneboina"
+				},
+				{
+					"pattern": "facultypage",
+					"name": "faculty",
+					"view": "faculty",
+					"targetAggregation": "pages",
+					"controlId": "nanneboina"
+				},
+				{
+					"pattern": "studentpage",
+					"name": "student",
+					"view": "student",
+					"targetAggregation": "pages",
+					"controlId": "nanneboina"
+				},
+				{
+					"pattern": "addresultspage",
+					"name": "addresults",
+					"view": "addresults",
+					"targetAggregation": "pages",
+					"controlId": "nanneboina"
+				},
+				{
+					"pattern": "viewresultspage",
+					"name": "viewresults",
+					"view": "viewresults",
+					"targetAggregation": "pages",
+					"controlId": "nanneboina"
+				},
+				{
+					"pattern": "fprofilepage",
+					"name": "fprofile",
+					"view": "fprofile",
+					"targetAggregation": "pages",
+					"controlId": "nanneboina"
+				},
+				{
+					"pattern": "sprofilepage",
+					"name": "sprofile",
+					"view": "sprofile",
+					"targetAggregation": "pages",
+					"controlId": "nanneboina"
+				}
+			]
+		}
+	}
+}

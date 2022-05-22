@@ -1,0 +1,30 @@
+<mvc:View controllerName="nanneboinaproj_results.controller.student" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<App>
+		<pages>
+			<Page title="Results Management System">
+				<content>
+					<f:SimpleForm id="SimpleFormToolbar" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4"
+						labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1"
+						singleContainerFullSize="false" ariaLabelledBy="Title1">
+						<f:toolbar>
+							<Toolbar id="TB1">
+								<Title id="Title1" text="Student Page"/>
+							</Toolbar>
+						</f:toolbar>
+						<f:content>
+						</f:content>
+					</f:SimpleForm>
+					<FlexBox justifyContent="Center">
+						<HBox>
+							<Button text="View Results" press="onView"/>
+							<Button text="Profile" press="onProfile"/>
+							<Button text="Logout" press="onLogout"/>
+						</HBox>
+					</FlexBox>
+					
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,73 @@
+<mvc:View controllerName="nanneboinaproj_results.controller.viewresults" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<App>
+		<pages>
+			<Page title="Results Management System">
+				<content>
+					<f:SimpleForm id="SimpleFormToolbar" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4"
+						labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1"
+						singleContainerFullSize="false" ariaLabelledBy="Title1">
+						<f:toolbar>
+							<Toolbar id="TB1">
+								<Title id="Title1" text="Results Page"/>
+							</Toolbar>
+						</f:toolbar>
+						<f:content></f:content>
+					</f:SimpleForm>
+					<Bar>
+						<contentRight>
+							<Button text="Back" press="onBack"/>
+						</contentRight>
+					</Bar>
+					<Table id='resTable' items="{/}">
+						<headerToolbar>
+							<OverflowToolbar>
+								<Title text="" level="H4"/>
+							</OverflowToolbar>
+						</headerToolbar>
+						<columns>
+							<Column>
+								<Text text="SID"/>
+							</Column>
+							<Column>
+								<Text text="SEM"/>
+							</Column>
+							<Column>
+								<Text text="SUB1"/>
+							</Column>
+							<Column>
+								<Text text="SUB2"/>
+							</Column>
+							<Column>
+								<Text text="SUB3"/>
+							</Column>
+							<Column>
+								<Text text="SUB4"/>
+							</Column>
+							<Column>
+								<Text text="SUB5"/>
+							</Column>
+							<Column>
+								<Text text="SUB6"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Text text="{Sid}"/>
+									<Text text="{Msem}"/>
+									<Text text="{Msub1}"/>
+									<Text text="{Msub2}"/>
+									<Text text="{Msub3}"/>
+									<Text text="{Msub4}"/>
+									<Text text="{Msub5}"/>
+									<Text text="{Msub6}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

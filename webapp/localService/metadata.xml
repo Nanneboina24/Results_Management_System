@@ -1,0 +1,59 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZNS_ODATA_SRV" xml:lang="en" sap:schema-version="1">
+            <EntityType Name="ZNS_STUDENT" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Sid"/>
+                </Key>
+                <Property Name="Sid" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="SID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Sname" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="SNAME" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Sdob" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="SDOB" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Sdegre" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="SDEG" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Sdept" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="SDEPT" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Syear" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="SYEAR" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Smob" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="SMOB" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Semail" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="SEMAIL" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ZNS_FACULTY" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Fid"/>
+                </Key>
+                <Property Name="Fid" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="FID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fname" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="FNAME" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fdob" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="FDOB" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fdoj" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="FDOJ" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fqlf" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="FQLF" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fdept" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="FDEPT" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fmob" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="FMOB" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Femail" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="FEMAIL" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ZNS_MARKS" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Sid"/>
+                </Key>
+                <Property Name="Sid" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="SID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fid" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="FID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Msem" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="SEM" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Msub1" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="SUB1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Msub2" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="SUB2" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Msub3" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="SUB3" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Msub4" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="SUB4" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Msub5" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="SUB5" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Msub6" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="SUB6" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="ZNS_ODATA_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZNS_STUDENTSet" EntityType="ZNS_ODATA_SRV.ZNS_STUDENT" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZNS_FACULTYSet" EntityType="ZNS_ODATA_SRV.ZNS_FACULTY" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZNS_MARKSSet" EntityType="ZNS_ODATA_SRV.ZNS_MARKS" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link
+                xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZNS_ODATA_SRV/$metadata"/>
+                <atom:link
+                    xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZNS_ODATA_SRV/$metadata"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>

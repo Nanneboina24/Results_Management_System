@@ -1,0 +1,61 @@
+<mvc:View controllerName="nanneboinaproj_results.controller.addresults" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<App>
+		<pages>
+			<Page title="Results Management System">
+				<content>
+					<f:SimpleForm id="SimpleFormToolbar" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4"
+						labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1"
+						singleContainerFullSize="false" ariaLabelledBy="Title1">
+						<f:toolbar>
+							<Toolbar id="TB1">
+								<Title id="Title1" text="Faculty Page"/>
+							</Toolbar>
+						</f:toolbar>
+						<f:content>
+							<Label text="Faculty Id"/>
+							<Input type="Text" id="fid" placeholder="Enter Faculty id" value="{vModel>/Fid}" />
+							<Label text="Student Id"/>
+							<Input type="Text" id="sid" placeholder="Enter Student id" value="{vModel>/Sid}" />
+							<Label text="Semester"/>
+							<ComboBox xmlns="sap.m" id="sbox" selectionChange="onChange" value="{vModel>/Msem}" >
+								<items>
+									<core:Item xmlns:core="sap.ui.core" key="key1" text="1" id="item1"/>
+									<core:Item xmlns:core="sap.ui.core" key="key2" text="2" id="item2"/>
+									<core:Item xmlns:core="sap.ui.core" key="key3" text="3" id="item3"/>
+									<core:Item xmlns:core="sap.ui.core" key="key4" text="4" id="item4"/>
+									<core:Item xmlns:core="sap.ui.core" key="key5" text="5" id="item5"/>
+									<core:Item xmlns:core="sap.ui.core" key="key6" text="6" id="item6"/>
+									<core:Item xmlns:core="sap.ui.core" key="key7" text="7" id="item7"/>
+									<core:Item xmlns:core="sap.ui.core" key="key8" text="8" id="item8"/>
+								</items>
+							</ComboBox>
+							<Label text="Subject1"/>
+							<Input type="Text" id="msub1" placeholder="Enter marks" value="{vModel>/Msub1}" />
+							<Label text="Subject2"/>
+							<Input type="Text" id="msub2" placeholder="Enter marks" value="{vModel>/Msub2}"/>
+							<Label text="Subject3"/>
+							<Input type="Text" id="msub3" placeholder="Enter marks" value="{vModel>/Msub3}"/>
+							<Label text="Subject4"/>
+							<Input type="Text" id="msub4" placeholder="Enter marks" value="{vModel>/Msub4}"/>
+							<Label text="Subject5"/>
+							<Input type="Text" id="msub5" placeholder="Enter marks" value="{vModel>/Msub5}"/>
+							<Label text="Subject6"/>
+							<Input type="Text" id="msub6" placeholder="Enter marks" value="{vModel>/Msub6}"/>
+						</f:content>
+					</f:SimpleForm>
+					<FlexBox justifyContent="Center">
+						<HBox>
+							<Button text="Get" press="onGet"/>
+							<Button text="Save" press="onSave"/>
+							<Button text="Update" press="onUpdate"/>
+							<Button text="Delete" press="onDelete"/>
+							<Button text="Clear" press="onClear"/>
+							<Button text="Back" press="onBack"/>
+						</HBox>
+					</FlexBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,56 @@
+<mvc:View controllerName="nanneboinaproj_results.controller.addfaculty" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<App>
+		<pages>
+			<Page title="Results Management System">
+				<content>
+					<f:SimpleForm id="SimpleFormToolbar" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4"
+						labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1"
+						singleContainerFullSize="false" ariaLabelledBy="Title1">
+						<f:toolbar>
+							<Toolbar id="TB1">
+								<Title id="Title1" text="Admin_Faculty Page"/>
+							</Toolbar>
+						</f:toolbar>
+						<f:content>
+							<Label text="Faculty Id"/>
+							<Input type="Text" id="fid" placeholder="Enter Faculty id" value="{vModel>/Fid}"/>
+							<Label text="Faculty Name"/>
+							<Input type="Text" id="fname" placeholder="Enter Faculty name" value="{vModel>/Fname}"/>
+							<Label text="Faculty Dob"/>
+							<DatePicker id="fdob" placeholder="Enter Faculty dob" change="handleChange" class="sapUiSmallMarginBottom" value="{vModel>/Fdob}"/>
+							<Label text="Faculty Qualification"/>
+							<Input type="Text" id="fqlf" placeholder="Enter Faculty qualification" value="{vModel>/Fqlf}"/>
+							<Label text="Faculty Department"/>
+							<ComboBox xmlns="sap.m" id="fbox" selectionChange="onChange" value="{vModel>/Fdept}">
+								<items>
+									<core:Item xmlns:core="sap.ui.core" key="key1" text="CSE" id="item1"/>
+									<core:Item xmlns:core="sap.ui.core" key="key2" text="ECE" id="item2"/>
+									<core:Item xmlns:core="sap.ui.core" key="key3" text="EEE" id="item3"/>
+									<core:Item xmlns:core="sap.ui.core" key="key4" text="CIVIL" id="item4"/>
+									<core:Item xmlns:core="sap.ui.core" key="key5" text="MECH" id="item5"/>
+								</items>
+							</ComboBox>
+							<Label text="Faculty Doj"/>
+							<DatePicker id="fdoj" placeholder="Enter Faculty doj" change="handleChange" class="sapUiSmallMarginBottom" value="{vModel>/Fdoj}"/>
+							<Label text="Faculty Mob Num"/>
+							<Input type="Text" id="fmob" placeholder="Enter Faculty mob num" value="{vModel>/Fmob}"/>
+							<Label text="Faculty Email"/>
+							<Input type="Text" id="femail" placeholder="Enter Faculty email" value="{vModel>/Femail}"/>
+						</f:content>
+					</f:SimpleForm>
+					<FlexBox justifyContent="Center">
+						<HBox>
+							<Button text="Get" press="onGet"/>
+							<Button text="Add" press="onAdd"/>
+							<Button text="Update" press="onUpdate"/>
+							<Button text="Delete" press="onDelete"/>
+							<Button text="Clear" press="onClear"/>
+							<Button text="Back" press="onBack"/>
+						</HBox>
+					</FlexBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

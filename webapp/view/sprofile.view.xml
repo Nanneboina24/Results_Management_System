@@ -1,0 +1,43 @@
+<mvc:View controllerName="nanneboinaproj_results.controller.sprofile" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<App>
+		<pages>
+			<Page title="Results Management System">
+				<content>
+					<f:SimpleForm id="SimpleFormToolbar" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4"
+						labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1"
+						singleContainerFullSize="false" ariaLabelledBy="Title1">
+						<f:toolbar>
+							<Toolbar id="TB1">
+								<Title id="Title1" text="Student Profile Page"/>
+							</Toolbar>
+						</f:toolbar>
+						<f:content>
+							<Label text="Student Id"/>
+							<Input type="Text" id="sid" editable="false" value="{vModel>/Sid}" />
+							<Label text="Student Name"/>
+							<Input type="Text" id="sname" editable="false" value="{vModel>/Sname}"/>
+							<Label text="Student Dob"/>
+					    	<Input type="Text" id="sdob" editable="false" value="{vModel>/Sdob}"/>
+							<Label text="Student Degree" />
+							<Input type="Text" id="sdeg" editable="false" value="{vModel>/Sdeg}"/>
+							<Label text="Student Department"/>
+							<Input type="Text" id="sdept" editable="false" value="{vModel>/Sdept}"/>
+							<Label text="Student Year"/>
+							<Input type="Text" id="syear" editable="false" value="{vModel>/Syear}"/>
+							<Label text="Student Mob Num"/>
+							<Input type="Text" id="smob" editable="false" value="{vModel>/Smob}"/>
+							<Label text="Student Email"/>
+							<Input type="Text" id="semail" editable="false" value="{vModel>/Semail}"/>
+						</f:content>
+					</f:SimpleForm>
+					<FlexBox justifyContent="Center">
+						<HBox>
+							<Button text="Back" press="onBack"/>
+						</HBox>
+					</FlexBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
